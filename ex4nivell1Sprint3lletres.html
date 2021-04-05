@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset='UTF-8'>
+  <title>
+    ex4Nivell1Sprint3 LLetres - MAP Concat -
+  </title>
+</head>
+
+<body>
+  <p id="output"></p>
+  <p>
+    Crea una altra array amb el teu cognom on cada posició correspongui a una lletra.
+    Fusiona els dos arrays en un. A més, afegeix una posició amb un espai buit entre la primera
+    i la segona. És a dir, partim de 'array name i surname i al acabar l’execució només tindrem una
+    que es dirà fullName.
+  </p>
+  <script>
+
+    var m = new Map([['F', 1], ['R', 2], ['A', 3], ['N', 4], ['C', 5], ['E', 6], ['S', 7], ['C', 8], []]);
+    var n = new Map([['B', 1], ['E', 2], ['D', 3], ['O', 4], ['S', 5]]);
+
+    for (const v of m.keys()) {
+      console.log(v);
+    };
+    for (const l of n.keys()) {
+      console.log(l);
+    };
+
+    const arrayNom = [...m.keys()];
+    const arrayCognom = [...n.keys()];
+    const fullName = arrayNom.concat(arrayCognom);
+
+    document.getElementById("output").innerHTML = " El nom es " + fullName;
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

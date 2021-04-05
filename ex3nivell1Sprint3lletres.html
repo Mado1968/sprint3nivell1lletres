@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ex1 Nivell1 Sprint3 LLETRES</title>
+</head>
+
+<body>
+    <form>
+
+        <button type="button" onclick='trobaParaules()' id="boton">Mostrar lletres i nombre de vegades que es repeteixen</button>
+    </form>
+    <p id="output"></p><br>
+    <p id="output1"></p><br>
+    <p id="output2"></p>
+    <script>
+        function trobaParaules() {
+            let texto = "Francesc";
+            let palabras = texto.split("");
+            let numeroVocales = texto.match(/[aeiou]/gi).length;
+            let numeroConsonants = texto.match(/[cdfghjklmnpqrstvwxyz]/gi).length;
+           
+            if (palabras) {
+                palabras.forEach(function (elemento, indice) {
+                    textoaEscribir = ` ${elemento.trim()}`;
+                    console.log(textoaEscribir);
+                
+                })
+               
+            }
+            console.log("Hem trobat"+ numeroConsonants +"consonants");
+            console.log("Hem trobat" + numeroVocales + "vocals");
+            document.getElementById("output").innerHTML="El nom és "+ texto;
+            document.getElementById("output1").innerHTML="Hem trobat"+ numeroConsonants+"consonants";
+            document.getElementById("output2").innerHTML="Hem trobat"+ numeroVocales+"vocals";
+
+        }
+    </script>
+</body>
+
+</html>

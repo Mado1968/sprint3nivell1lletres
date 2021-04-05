@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ex1 Nivell1 Sprint3 LLETRES</title>
+</head>
+
+<body>
+    <form>
+
+        <button type="button" onclick='trobaParaules()' id="boton">Mostrar lletres i posició dins array</button>
+    </form>
+    <p id="output"></p>
+    <script>
+        function trobaParaules() {
+            let texto = "Francesc";
+            let palabras = texto.split("");
+           
+            if (palabras) {
+                palabras.forEach(function (elemento, indice) {
+                    textoaEscribir = ` ${elemento.trim()}`;
+                    console.log(textoaEscribir);
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>
